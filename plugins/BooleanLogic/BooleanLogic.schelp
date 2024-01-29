@@ -1,0 +1,26 @@
+class:: BooleanLogic
+summary:: Wavefonix Boolean Logic model as a UGen
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+Wavefonix Boolean Logic model as a UGen
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ BooleanLogic.ar(/* TODO */) }.play
+
+::
