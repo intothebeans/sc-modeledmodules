@@ -29,3 +29,10 @@ G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4
 Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1/0/10a03f31c4dce92cb371e761ce9429428bb6c176
 w
 G.idea/sonarlint/issuestore/6/c/6c50087d5c4967cbd3e5a84dc6728da90edb272f,3/3/33bfb77e9c2abd38337c0b29f944a6ade8a11c51
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+q
+Abuild/install/ModeledModules/BooleanLogic/Classes/BooleanLogic.sc,5/8/5814b0db350d623f8a3b5687c29336531f837e26
+€
+Pbuild/install/ModeledModules/BooleanLogic/HelpSource/Classes/BooleanLogic.schelp,8/4/842bfc72a057c70e70f97b5e41da558d9e4804ec
