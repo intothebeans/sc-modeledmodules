@@ -1,0 +1,26 @@
+class:: Ripples
+summary:: Mutable Instruments Ripples module
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+Mutable Instruments Ripples module as a UGen
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ Ripples.ar(/* TODO */) }.play
+
+::
