@@ -9,7 +9,7 @@ jobs:
     name: ${{ matrix.name }}
 #   You may need to uncomment this part if using granular workflows.
     permissions:
-      content: write
+      contents: write
     strategy:
       matrix:
         include:
