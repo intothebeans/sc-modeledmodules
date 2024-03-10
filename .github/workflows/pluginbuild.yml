@@ -8,8 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.name }}
 #   You may need to uncomment this part if using granular workflows.
-#   permissions:
-#     content: write
+    permissions:
+      content: write
     strategy:
       matrix:
         include:
@@ -29,10 +29,10 @@ jobs:
       ARCHIVE_NAME: BooleanLogic-${{ matrix.name }}.zip
     steps:
     - name: Checkout BooleanLogic
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Checkout SuperCollider
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: supercollider/supercollider
         path: ${{ env.SC_PATH }}
