@@ -61,7 +61,7 @@ jobs:
       if: runner.os != 'Windows'
       shell: bash
       working-directory: ${{ env.INSTALL_PATH }}
-      run: zip -r "$ARCHIVE_NAME" "BooleanLogic"
+      run: zip -r "$ARCHIVE_NAME" . -i "BooleanLogic"
 
       # Gather all files in a zip
     - name: Zip up build (Windows)
