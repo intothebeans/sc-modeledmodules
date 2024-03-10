@@ -26,7 +26,7 @@ jobs:
       SC_PATH: ${{ github.workspace }}/supercollider
       BUILD_PATH: ${{ github.workspace }}/build
       INSTALL_PATH: ${{ github.workspace }}/build/Install
-      ARCHIVE_NAME: BooleanLogic-${{ matrix.name }}.zip
+      ARCHIVE_NAME: ModeledModules-${{ matrix.name }}.zip
     steps:
     - name: Checkout BooleanLogic
       uses: actions/checkout@v4
@@ -61,14 +61,14 @@ jobs:
       if: runner.os != 'Windows'
       shell: bash
       working-directory: ${{ env.INSTALL_PATH }}
-      run: zip -r "$ARCHIVE_NAME" . -i "BooleanLogic"
+      run: zip -r "$ARCHIVE_NAME" "ModeledModules"
 
       # Gather all files in a zip
     - name: Zip up build (Windows)
       if: runner.os == 'Windows'
       shell: bash
       working-directory: ${{ env.INSTALL_PATH }}
-      run: 7z a "$ARCHIVE_NAME" -tzip "BooleanLogic"
+      run: 7z a "$ARCHIVE_NAME" -tzip "ModeledModules"
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
