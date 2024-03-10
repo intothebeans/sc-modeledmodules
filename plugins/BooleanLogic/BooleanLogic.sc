@@ -5,11 +5,10 @@ BooleanLogic : UGen {
             and: 0,
             or: 1,
             xor: 2,
-            not: 3,
-            nand: 4,
-            nor: 5,
-            xnor: 6,
-            0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6
+            nand: 3,
+            nor: 4,
+            xnor: 5,
+            0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5
         );
     }
 	*kr { |input1, input2, operation=0|

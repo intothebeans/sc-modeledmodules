@@ -1,26 +1,50 @@
-class:: BooleanLogic
+title:: BooleanLogic
 summary:: Wavefonix Boolean Logic model as a UGen
-related:: TODO
-categories:: UGens>TODO
+categories:: UGens>Generators>Deterministic
 
 description::
 
-Wavefonix Boolean Logic model as a UGen
-
+Wavefonix Boolean Logic model as a UGen. Takes two input values and compares them using a boolean operation.
 
 classmethods::
 
-method::ar, kr
+private::operationNumberFor
 
-argument::TODO
+method::kr
 
-argument::TODO
+argument::input1
+First comparison input
 
+argument::input2
+Second comparison input
+
+argument::operation
+Which comparison operation to perform using the available symbols or corresponding integer value:
+definitionList::
+## \and || (default value) returns a 1 if both inputs are 1 and 0 otherwise
+## \or || returns a 1 if either input is 1
+## \xor || returns a 1 if only one input is a 1
+## \nand ||inverted "and" gate which returns a 1 unless both inputs are 1
+## \nor || inverted "or" gate which returns a 1 only if both inputs are 0
+## \xnor || returns a 1 when both inputs are 1 or both are 0
+::
+
+returns:: 1 or 0
 
 examples::
-
+A synth def using the BooleanLogic function to stutter the playback of a sound file and change where the playback starts on each trigger.
 code::
 
-{ BooleanLogic.ar(/* TODO */) }.play
+SynthDef("beat", {
+	var imp = 2.25, den = 8;
+	var buf = Buffer.read(s, "/example/path/sound.mp3");
+	var in1 = Impulse.kr(imp);
+	var in2 = Dust.kr(den);
+	var bool = BooleanLogic.kr(in1, in2, \or);
+	var dem = Dseq([0, 10315, 20630, 30945] , inf);
+	var d = Demand.kr(bool, 0, dem);
+	var play = PlayBuf.ar(1, buf, 1, bool, d);
+	Out.ar(0, play);
+}).send(s)
 
 ::
