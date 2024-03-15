@@ -1,0 +1,32 @@
+title:: Ripples
+summary:: Mutable Instruments Ripples module
+categories:: UGens>Filters
+
+description:: A bank of 3 Type I Chebychev filters: a Fourth Order Bandpass, a Second Order Lowpass, and a Fourth Order Lowpass. Each filter
+output undergoes frequency modulation before being output.
+
+
+classmethods::
+
+method::ar, kr
+
+argument::specificationsArrayRef
+A reference to an Array of two Arrays
+note:: Due to the implementation, index teletype::0 will always correspond to the band pass, teletype::1 the 2-pole low pass, and teletype::2 the
+4-pole low pass.
+::
+definitionList::
+## cutoff frequencies || an Array of cutoff frequencies with a size of teletype::1-3:: inclusive
+## rs || an Array of maximum allowable ripples or nil. If nil, then rqs default to teletype::1.0::.
+::
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ Ripples.ar(/* TODO */) }.play
+
+::
