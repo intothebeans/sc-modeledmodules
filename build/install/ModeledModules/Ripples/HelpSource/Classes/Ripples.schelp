@@ -15,33 +15,33 @@ argument::input
 The signal to be filtered. Expects an audio rate or control rate input.
 
 argument::bpCF
-The center frequency of the bandpass filter.
+Center frequency of the bandpass filter.
 
 argument::bpR
-The maximum allowed ripple.
+Maximum allowed ripple
 
 argument::bw
 This input is only relevant to the bandpass filter and specifies the filter bandwith.
 
 argument::lp2CF
-The center frequency of the second order lowpass filter.
+Center frequency of the second order lowpass filter
 
 argument::lp2R
-The maximum allowed ripple.
+Maximum allowed ripple
 
 argument::lp4CF
-The center frequency of the fourth order lowpass filter.
+Center frequency of the fourth order lowpass filter
 
 argument::lp4R
-The maximum allowed ripple .
+The maximum allowed ripple.
 
-argument::fm_freq
+argument::fmFreq
 Frequency of the modulation signal
 
-argument::fm_mul
+argument::fmMul
 The amplitude of the modulation signal
 
-argument::fm_index
+argument::fmIndex
 The index of the modulation signal
 
 returns::
