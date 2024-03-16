@@ -1,0 +1,177 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"sc_add_server_plugin"
+		],
+		"files" : 
+		[
+			"cmake_modules/SuperColliderServerPlugin.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 6
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 6
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 6
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 6
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/BooleanLogic",
+			"paths" : 
+			[
+				"BooleanLogic_scsynth.so"
+			],
+			"targetId" : "BooleanLogic_scsynth::@6890427a1f51a3e7e1df",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/BooleanLogic",
+			"paths" : 
+			[
+				"BooleanLogic_supernova.so"
+			],
+			"targetId" : "BooleanLogic_supernova::@6890427a1f51a3e7e1df",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/BooleanLogic/Classes",
+			"paths" : 
+			[
+				"plugins/BooleanLogic/BooleanLogic.sc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/BooleanLogic/HelpSource/Classes",
+			"paths" : 
+			[
+				"plugins/BooleanLogic/BooleanLogic.schelp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/Ripples",
+			"paths" : 
+			[
+				"Ripples_scsynth.so"
+			],
+			"targetId" : "Ripples_scsynth::@6890427a1f51a3e7e1df",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/Ripples",
+			"paths" : 
+			[
+				"Ripples_supernova.so"
+			],
+			"targetId" : "Ripples_supernova::@6890427a1f51a3e7e1df",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/Ripples/Classes",
+			"paths" : 
+			[
+				"plugins/Ripples/Ripples.sc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/Ripples/HelpSource/Classes",
+			"paths" : 
+			[
+				"plugins/Ripples/Ripples.schelp"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

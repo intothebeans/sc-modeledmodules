@@ -1,27 +1,38 @@
-Ripples : MultiOutUGen {
+Ripples : Filter {
     // array of cutoff frequencies and rqs
-	*ar { arg input, bpCF=440.0, bpR=0.5, bw=1.0, lp2CF=0.0, lp2R= 0.0, lp4CF=0.0, lp4R=0.0, fmFreq=440.0, fmMul=1.0, fmIndex=1.0, mul=1.0, add=0.0;
-		^this.multiNew('audio', input, bpCF, bpR, bw, lp2CF, lp2R, lp4CF, lp4R, fmFreq, fmMul, fmIndex).madd(mul, add);
+	*ar { |specificationsArrayRef, input, fm_freq=440.0, fm_mul=1.0, fm_index=1.0, bw=1, mul=1.0, add=0.0|
+	    specificationsArrayRef = specificationsArrayRef.multiChannelExpandRef(2);
+		^this.multiNew('audio', input, fm_freq, fm_mul, fm_index, specificationsArrayRef).madd(mul, add);
 	}
 
-	*kr { arg input, bpCF=440.0, bpR=0.5, bw=1.0, lp2CF=0.0, lp2R= 0.0, lp4CF=0.0, lp4R=0.0, fmFreq=440.0, fmMul=1.0, fmIndex=1.0, mul=1.0, add=0.0;
-		^this.multiNew('control', input, bpCF, bpR, bw, lp2CF, lp2R, lp4CF, lp4R, fmFreq, fmMul, fmIndex).madd(mul, add);
+	*kr { |specificationsArrayRef, input, fm_freq=440, fm_mul=1.0, fm_index=1.0, bw=1, mul=1.0, add=0.0|
+	    specificationsArrayRef = specificationsArrayRef.multiChannelExpandRef(2);
+		^this.multiNew('control', input, fm_freq, fm_mul, fm_index, specificationsArrayRef).madd(mul, add);
 	}
 
+	*new1 {|rate, input, fm_freq, fm_mul, fm_index, bw, arrayRef|
+		var specs, cfs, rqs, cfs_filled, rqs_filled;
+		# cfs, rqs = arrayRef.dereference;
+		specs = [
+			cfs,
+			rqs ?? {Array.fill(cfs.size,1.0)}
+		].flop.flat;
+		^super.new.rate_(rate).addToSynth.init([input, fm_freq, fm_mul, fm_index, bw] ++ specs)
+	}
 
-	init {arg ... theInputs;
+	init {|theInputs|
 		inputs = theInputs;
-		channels = [
-			OutputProxy(rate, this, 0),
-			OutputProxy(rate, this, 1),
-			OutputProxy(rate, this, 2)
-		];
-		^channels;
 	}
 
 	checkInputs {
+		if(inputs.at(0).rate != \control or: { inputs.at(0).rate != \audio }, {
+			^"An audio-rate frequency argument isn't allowed when RampUpGen runs at control rate."
+		});
+
 		^this.checkValidInputs;
 	}
 
-	argNamesInputOffset { ^2}
+
+	argNamesInputOffset { ^2 }
 }
+
