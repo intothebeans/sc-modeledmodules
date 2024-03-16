@@ -12,11 +12,11 @@ namespace ModeledModules {
 
     Ripples::Ripples() {
         bp_cf = in0(BP_CF);
-        bp_rq = in0(BP_RQ);
-        lp1_cf = in0(LP1_CF);
-        lp1_r = in0(LP1_RQ);
-        lp2_cf = in0(LP2_CF);
-        lp2_rq = in0(LP2_RQ);
+        bp_rq = in0(BP_R);
+        lp1_cf = in0(LP2_CF);
+        lp1_r = in0(LP2_R);
+        lp2_cf = in0(LP4_CF);
+        lp2_rq = in0(LP4_R);
         if(bp_cf != 0){
             calculateCoefficients_bp(bp_cf, bp_rq);
         }
@@ -40,21 +40,21 @@ namespace ModeledModules {
         float * lp2_outbuf = out(2);
 
 
-        if(bp_cf != in0(BP_CF) || bp_rq != in0(BP_RQ) && bp_cf != 0){
+        if(bp_cf != in0(BP_CF) || bp_rq != in0(BP_R) && bp_cf != 0){
             bp_cf = in0(BP_CF);
-            bp_rq = in0(BP_RQ);
+            bp_rq = in0(BP_R);
             calculateCoefficients_bp(bp_cf, bp_rq);
         }
 
-        if(lp1_cf != in0(LP1_CF) || lp1_r != in0(LP1_RQ) && lp1_cf != 0){
-            lp1_cf = in0(LP1_CF);
-            lp1_r = in0(LP1_RQ);
+        if(lp1_cf != in0(LP2_CF) || lp1_r != in0(LP2_R) && lp1_cf != 0){
+            lp1_cf = in0(LP2_CF);
+            lp1_r = in0(LP2_R);
             calculateCoefficients_lp1(lp1_cf, lp1_r);
         }
 
-        if(lp2_cf != in0(LP2_CF) || lp2_rq != in0(LP2_RQ) && lp2_cf != 0){
-            lp2_cf = in0(LP2_CF);
-            lp2_rq = in0(LP2_RQ);
+        if(lp2_cf != in0(LP4_CF) || lp2_rq != in0(LP4_R) && lp2_cf != 0){
+            lp2_cf = in0(LP4_CF);
+            lp2_rq = in0(LP4_R);
             calculateCoefficients_lp2( lp2_cf, lp2_rq);
         }
 
@@ -65,6 +65,7 @@ namespace ModeledModules {
             if (bp_cf != 0) {
                 float bp_out = bp_b0 * in + bp_b1 * bp_x1 + bp_b2 * bp_x2 + bp_b3 * bp_x3 + bp_b4 * bp_x4
                                - bp_a1 * bp_y1 - bp_a2 * bp_y2 - bp_a3 * bp_y3 - bp_a4 * bp_y4;
+                bp_out = zapgremlins(bp_out);
                 bp_x4 = bp_x3;
                 bp_x3 = bp_x2;
                 bp_x2 = bp_x1;

@@ -87,8 +87,8 @@ namespace ModeledModules {
         float lp2_y3 = 0;
         float lp2_y4 = 0;
 
-        enum inputs {IN, FM_FREQ, FM_MUL, FM_INDEX, BW_in,
-                BP_CF, BP_RQ, LP1_CF, LP1_RQ, LP2_CF, LP2_RQ};
+        enum inputs {IN, BP_CF, BP_R, BW_in, LP2_CF, LP2_R, LP4_CF,
+                LP4_R, FM_FREQ, FM_MUL, FM_INDEX};
     };
 
 } // namespace ModeledModules
