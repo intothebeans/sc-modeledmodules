@@ -34,7 +34,7 @@ The index of the modulation signal
 argument::bw
 This input is only relevant to the bandpass filter and specifies the filter bandwith.
 
-private::new1, init, checkInputs
+private::new1, init, checkInputs, argNamesInputOffset
 
 
 

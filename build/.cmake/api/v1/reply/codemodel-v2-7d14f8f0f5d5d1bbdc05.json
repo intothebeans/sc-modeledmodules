@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-53a5f84749e159893b20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Modeled Modules",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BooleanLogic_scsynth::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BooleanLogic_scsynth-Debug-ccb5006372baa34456b7.json",
+					"name" : "BooleanLogic_scsynth",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BooleanLogic_supernova::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BooleanLogic_supernova-Debug-4e52f7a5d99ce1f1644b.json",
+					"name" : "BooleanLogic_supernova",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ripples_scsynth::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ripples_scsynth-Debug-e68c2406fbdef8063bd9.json",
+					"name" : "Ripples_scsynth",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ripples_supernova::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ripples_supernova-Debug-cf6df962acb8bc02387c.json",
+					"name" : "Ripples_supernova",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/aiden/git/sc-modeledmodules/build",
+		"source" : "/home/aiden/git/sc-modeledmodules"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

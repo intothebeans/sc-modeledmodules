@@ -21,15 +21,15 @@ Second comparison input
 argument::operation
 Which comparison operation to perform using the available symbols or corresponding integer value:
 definitionList::
-## \and || (default value) returns a teletype::1 if both inputs are teletype::1 and teletype::0 otherwise
-## \or || returns a teletype::1 if either input is teletype::1
-## \xor || returns a teletype::1 if only one input is a teletype::1
-## \nand ||inverted "and" gate which returns a teletype::1 unless both inputs are teletype::1
-## \nor || inverted "or" gate which returns a teletype::1 only if both inputs are teletype::0
-## \xnor || returns a teletype::1 when both inputs are teletype::1 or both are teletype::0
+## \and || (default value) returns a teletype::1 if both inputs are teletype::1:: and teletype::0:: otherwise
+## \or || returns a teletype::1:: if either input is teletype::1::
+## \xor || returns a teletype::1:: if only one input is a teletype::1::
+## \nand ||inverted "and" gate which returns a teletype::1:: unless both inputs are teletype::1::
+## \nor || inverted "or" gate which returns a teletype::1:: only if both inputs are teletype::0::
+## \xnor || returns a teletype::1 when both inputs are teletype::1:: or both are teletype::0::
 ::
 
-returns:: teletype::1 or teletype::0
+returns:: teletype::1:: or teletype::0::
 
 examples::
 A synth def using the BooleanLogic function to stutter the playback of a sound file and change where the playback starts on each trigger.

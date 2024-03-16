@@ -1,4 +1,4 @@
-Ripples : UGen {
+Ripples : Filter {
     // array of cutoff frequencies and rqs
 	*ar { |specificationsArrayRef, input, fm_freq=440.0, fm_mul=1.0, fm_index=1.0, bw=1, mul=1.0, add=0.0|
 	    specificationsArrayRef = specificationsArrayRef.multiChannelExpandRef(2);
