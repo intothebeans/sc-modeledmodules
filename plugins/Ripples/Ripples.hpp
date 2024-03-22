@@ -40,9 +40,21 @@ namespace ModeledModules {
         struct Filter {
             float cf;
             float r;
-            float bw = 0;
+            float rq = 0;
             Coefficients coefficients;
             StoredSamples storedSamples;
+        };
+
+        struct Slopes {
+            float b0_slope = 0;
+            float b1_slope = 0;
+            float b2_slope = 0;
+            float b3_slope = 0;
+            float b4_slope = 0;
+            float a1_slope = 0;
+            float a2_slope = 0;
+            float a3_slope = 0;
+            float a4_slope = 0;
         };
 
         const float FS = static_cast<float>(sampleRate());
@@ -52,9 +64,13 @@ namespace ModeledModules {
         Filter LPF2 = Filter();
         Filter LPF4 = Filter();
 
-        inline Coefficients secondOrderLowpassCoefficients(Filter &filter) const;
-
-        enum inputs {INPUT, BP_CF, BP_R, BP_BW, LP2_CF, LP2_R, LP4_CF, LP4_R, FM_FREQ, FM_MUL, FM_INDEX};
+        [[nodiscard]] inline Coefficients secondOrderLowpassCoefficients(const Filter &filter) const;
+        [[nodiscard]] inline Coefficients fourthOrderLowpassCoefficients(const Filter& filter) const;
+        [[nodiscard]] inline Coefficients fourthOrderBandpassCoefficients(const Filter& filter) const;
+        inline void calcLP2(const Slopes& slopes, int nSamples, const float* input, float* outbuf);
+        static inline void calcFourthOrder(Filter& filter, const Slopes& slopes, int nSamples, const float* input, float* outbuf);
+        static inline Slopes calcSlopes(const Filter& filter, const Coefficients& newCoefficients, int nSamples) ;
+        enum inputs {INPUT, BP_CF, BP_R, BP_RQ, LP2_CF, LP2_R, LP4_CF, LP4_R, FM_FREQ, FM_MUL, FM_INDEX};
 
     };
 
