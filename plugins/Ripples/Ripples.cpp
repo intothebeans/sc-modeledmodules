@@ -126,8 +126,8 @@ namespace ModeledModules {
         newCoefficients.b1 = 2 * newCoefficients.b0;
         newCoefficients.b2 = newCoefficients.b0;
 
-        newCoefficients.a1 = 2 * term_1 - 4;
-        newCoefficients.a2 = term_1 - term_2 + 2;
+        newCoefficients.a1 = (2 * term_1 - 4) / D;
+        newCoefficients.a2 = (term_1 - term_2 + 2) / D;
         return newCoefficients;
     }
 
@@ -154,10 +154,10 @@ namespace ModeledModules {
         newCoefficients.b3 = 4 * newCoefficients.b0;
         newCoefficients.b4 = newCoefficients.b0;
 
-        newCoefficients.a1 = 4 * term_1 - 2*term_2 - 2 * term_4 - 4;
-        newCoefficients.a2 = 6 * term_1 - 2 * term_3 + 6;
-        newCoefficients.a3 = 4 * term_1 + 2 * term_2 - 2 * term_4 - 4;
-        newCoefficients.a4 = term_1 + 2 * term_2 + term_3 + term_4 + 1;
+        newCoefficients.a1 = (4 * term_1 - 2*term_2 - 2 * term_4 - 4)/D;
+        newCoefficients.a2 = (6 * term_1 - 2 * term_3 + 6) / D;
+        newCoefficients.a3 = (4 * term_1 + 2 * term_2 - 2 * term_4 - 4) / D;
+        newCoefficients.a4 = (term_1 + 2 * term_2 + term_3 + term_4 + 1) / D;
 
         return newCoefficients;
     }
