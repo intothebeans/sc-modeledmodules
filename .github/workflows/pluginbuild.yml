@@ -28,8 +28,10 @@ jobs:
       INSTALL_PATH: ${{ github.workspace }}/build/Install
       ARCHIVE_NAME: ModeledModules-${{ matrix.name }}.zip
     steps:
-    - name: Checkout BooleanLogic
+    - name: Checkout ModeledModules
       uses: actions/checkout@v4
+      with:
+        submodules: recursive
 
     - name: Checkout SuperCollider
       uses: actions/checkout@v4
