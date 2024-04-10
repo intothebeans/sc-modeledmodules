@@ -35,5 +35,5 @@ outbuf[i] = input[i] * gain;
 PluginLoad(DIYDelayUGens) {
     // Plugin magic
     ft = inTable;
-    registerUnit<{{ cookiecutter.project_namespace }}::DIYDelay>(ft, "DIYDelay", false);
+    registerUnit<ModeledModules::DIYDelay>(ft, "DIYDelay", false);
 }

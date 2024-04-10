@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Ripples_scsynth.so"
+			"path" : "DIYDelay_scsynth.so"
 		}
 	],
 	"backtrace" : 2,
@@ -13,6 +13,7 @@
 			"add_library",
 			"sc_add_server_plugin",
 			"install",
+			"target_link_libraries",
 			"add_definitions",
 			"include_directories",
 			"target_include_directories",
@@ -31,7 +32,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 103,
+				"line" : 132,
 				"parent" : 0
 			},
 			{
@@ -43,32 +44,44 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 1
 			},
 			{
 				"command" : 3,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
 				"file" : 1,
 				"line" : 60,
 				"parent" : 0
 			},
 			{
-				"command" : 4,
+				"command" : 5,
 				"file" : 1,
-				"line" : 61,
+				"line" : 65,
 				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 1
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 62,
-				"parent" : 1
-			},
-			{
-				"command" : 5,
-				"file" : 0,
 				"line" : 42,
-				"parent" : 6
+				"parent" : 8
 			}
 		]
 	},
@@ -78,35 +91,39 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -fPIC -fvisibility=hidden"
+					"fragment" : "-g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 4,
-					"define" : "NOVA_SIMD"
+					"define" : "DIYDelay_scsynth_EXPORTS"
 				},
 				{
-					"define" : "Ripples_scsynth_EXPORTS"
+					"backtrace" : 5,
+					"define" : "NOVA_SIMD"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
+					"path" : "/home/aiden/git/sc-modeledmodules/external/iir1"
+				},
+				{
+					"backtrace" : 7,
 					"path" : "/home/aiden/git/supercollider/external_libraries/nova-simd"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"path" : "/home/aiden/git/supercollider/include/plugin_interface"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"path" : "/home/aiden/git/supercollider/include/common"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"path" : "/home/aiden/git/supercollider/common"
 				}
 			],
@@ -115,7 +132,7 @@
 			{
 				"backtraces" : 
 				[
-					2
+					4
 				],
 				"standard" : "17"
 			},
@@ -125,14 +142,21 @@
 			]
 		}
 	],
-	"id" : "Ripples_scsynth::@6890427a1f51a3e7e1df",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "iir_static::@47e2edffb7065117f3b8"
+		}
+	],
+	"id" : "DIYDelay_scsynth::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
 				"backtrace" : 3,
-				"path" : "ModeledModules/Ripples"
+				"path" : "ModeledModules/DIYDelay"
 			}
 		],
 		"prefix" : 
@@ -147,12 +171,17 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "external/iir1/libiir_static.a",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "Ripples_scsynth",
-	"nameOnDisk" : "Ripples_scsynth.so",
+	"name" : "DIYDelay_scsynth",
+	"nameOnDisk" : "DIYDelay_scsynth.so",
 	"paths" : 
 	{
 		"build" : ".",
@@ -180,12 +209,12 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "plugins/Ripples/Ripples.cpp",
+			"path" : "plugins/DIYDelay/DIYDelay.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "plugins/Ripples/Ripples.hpp",
+			"path" : "plugins/DIYDelay/DIYDelay.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

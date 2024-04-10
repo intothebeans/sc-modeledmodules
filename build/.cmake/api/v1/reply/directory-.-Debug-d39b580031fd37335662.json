@@ -19,62 +19,92 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 78,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 1
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 70,
+				"line" : 73,
 				"parent" : 1
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 76,
+				"line" : 80,
 				"parent" : 1
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 79,
+				"line" : 83,
 				"parent" : 1
 			},
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 103,
+				"line" : 107,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 6
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 70,
+				"line" : 73,
 				"parent" : 6
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 76,
+				"line" : 80,
 				"parent" : 6
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 79,
+				"line" : 83,
 				"parent" : 6
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 11
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 73,
+				"parent" : 11
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 80,
+				"parent" : 11
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 11
 			}
 		]
 	},
@@ -133,7 +163,7 @@
 				"Ripples_scsynth.so"
 			],
 			"targetId" : "Ripples_scsynth::@6890427a1f51a3e7e1df",
-			"targetIndex" : 2,
+			"targetIndex" : 4,
 			"type" : "target"
 		},
 		{
@@ -145,7 +175,7 @@
 				"Ripples_supernova.so"
 			],
 			"targetId" : "Ripples_supernova::@6890427a1f51a3e7e1df",
-			"targetIndex" : 3,
+			"targetIndex" : 5,
 			"type" : "target"
 		},
 		{
@@ -165,6 +195,50 @@
 			"paths" : 
 			[
 				"plugins/Ripples/Ripples.schelp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/DIYDelay",
+			"paths" : 
+			[
+				"DIYDelay_scsynth.so"
+			],
+			"targetId" : "DIYDelay_scsynth::@6890427a1f51a3e7e1df",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/DIYDelay",
+			"paths" : 
+			[
+				"DIYDelay_supernova.so"
+			],
+			"targetId" : "DIYDelay_supernova::@6890427a1f51a3e7e1df",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/DIYDelay/Classes",
+			"paths" : 
+			[
+				"plugins/DIYDelay/DIYDelay.sc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Unspecified",
+			"destination" : "ModeledModules/DIYDelay/HelpSource/Classes",
+			"paths" : 
+			[
+				"plugins/DIYDelay/DIYDelay.schelp"
 			],
 			"type" : "file"
 		}

@@ -10,6 +10,7 @@ cmake_minimum_required(VERSION 3.12)
 set(project_name "Modeled Modules")
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake_modules ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 17)
+set(EXTERNAL_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/external/iir1)
 
 ####################################################################################################
 # load modules
@@ -55,6 +56,9 @@ option(NOVA_SIMD "Build plugins with nova-simd support." ON)
 
 ####################################################################################################
 # include libraries
+
+include_directories(${EXTERNAL_LIBRARY_PATH})
+add_subdirectory(external/iir1)
 
 if (NOVA_SIMD)
 	add_definitions(-DNOVA_SIMD)

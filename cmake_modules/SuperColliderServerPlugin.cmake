@@ -58,18 +58,22 @@ function(sc_add_server_plugin dest_dir name cpp sc schelp)
     if(SCSYNTH)
         set(sy_name "${name}_scsynth")
         add_library(${sy_name} MODULE "${cpp}")
+        target_link_libraries(${sy_name} iir::iir_static)
         install(TARGETS ${sy_name} LIBRARY DESTINATION ${dest_dir})
         sc_add_server_plugin_properties(${sy_name} FALSE)
         message(STATUS "Added server plugin target ${sy_name}")
+
     endif()
 
     if(SUPERNOVA)
         set(sn_name "${name}_supernova")
         add_library(${sn_name} MODULE "${cpp}")
+        target_link_libraries(${sn_name} iir::iir_static)
         # install scsynth/supernova targets to same dir
         install(TARGETS ${sn_name} LIBRARY DESTINATION ${dest_dir})
         sc_add_server_plugin_properties(${sn_name} TRUE)
         message(STATUS "Added server plugin target ${sn_name}")
+
     endif()
 
     if(sc)

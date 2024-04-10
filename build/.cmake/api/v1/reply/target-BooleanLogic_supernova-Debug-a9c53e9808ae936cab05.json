@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "BooleanLogic_scsynth.so"
+			"path" : "BooleanLogic_supernova.so"
 		}
 	],
 	"backtrace" : 2,
@@ -13,10 +13,12 @@
 			"add_library",
 			"sc_add_server_plugin",
 			"install",
+			"target_link_libraries",
 			"add_definitions",
+			"target_compile_definitions",
+			"sc_add_server_plugin_properties",
 			"include_directories",
-			"target_include_directories",
-			"sc_add_server_plugin_properties"
+			"target_include_directories"
 		],
 		"files" : 
 		[
@@ -31,41 +33,59 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 78,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 60,
+				"line" : 70,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 61,
+				"line" : 73,
 				"parent" : 1
 			},
 			{
 				"command" : 3,
-				"file" : 1,
-				"line" : 60,
-				"parent" : 0
+				"file" : 0,
+				"line" : 71,
+				"parent" : 1
 			},
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 61,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 62,
+				"line" : 74,
 				"parent" : 1
 			},
 			{
 				"command" : 5,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
 				"file" : 0,
 				"line" : 42,
 				"parent" : 6
@@ -78,35 +98,43 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -fPIC -fvisibility=hidden"
+					"fragment" : "-g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"define" : "BooleanLogic_scsynth_EXPORTS"
+					"define" : "BooleanLogic_supernova_EXPORTS"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"define" : "NOVA_SIMD"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "SUPERNOVA"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 8,
+					"path" : "/home/aiden/git/sc-modeledmodules/external/iir1"
+				},
+				{
+					"backtrace" : 9,
 					"path" : "/home/aiden/git/supercollider/external_libraries/nova-simd"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"path" : "/home/aiden/git/supercollider/include/plugin_interface"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"path" : "/home/aiden/git/supercollider/include/common"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"path" : "/home/aiden/git/supercollider/common"
 				}
 			],
@@ -115,7 +143,7 @@
 			{
 				"backtraces" : 
 				[
-					2
+					4
 				],
 				"standard" : "17"
 			},
@@ -125,7 +153,14 @@
 			]
 		}
 	],
-	"id" : "BooleanLogic_scsynth::@6890427a1f51a3e7e1df",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "iir_static::@47e2edffb7065117f3b8"
+		}
+	],
+	"id" : "BooleanLogic_supernova::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
@@ -147,12 +182,17 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "external/iir1/libiir_static.a",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "BooleanLogic_scsynth",
-	"nameOnDisk" : "BooleanLogic_scsynth.so",
+	"name" : "BooleanLogic_supernova",
+	"nameOnDisk" : "BooleanLogic_supernova.so",
 	"paths" : 
 	{
 		"build" : ".",
