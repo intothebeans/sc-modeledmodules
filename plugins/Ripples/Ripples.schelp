@@ -4,7 +4,6 @@ categories:: UGens>Filters
 
 description:: A bank of 3 Type I Chebychev filters: a Fourth Order Bandpass, a Second Order Lowpass, and a Fourth Order Lowpass. Each filter
 output undergoes frequency modulation before being output.
-warning::Maximum ripple values close to and exceeding 1 can cause glitches and extremely high frequencies::
 
 classmethods::
 
@@ -33,15 +32,6 @@ The center frequency for the fourth order lowpass filter.
 
 argument::lp4R
 The maximum allowed ripple for the fourth order lowpass filter.
-
-argument::fmFreq
-Frequency of the modulation signal.
-
-argument::fmMul
-The amplitude of the modulation signal.
-
-argument::fmIndex
-The index of the modulation signal.
 
 returns::
 An array of 3 OutputProxys corresponding to each filter (see link::Classes/OutputProxy::)

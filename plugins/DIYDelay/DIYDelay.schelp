@@ -1,17 +1,26 @@
 class:: DIYDelay
-summary:: A UGen modeling Erica Synths DIY Delay
+summary:: A simple audio volume gain plugin
 related:: TODO
 categories:: UGens>TODO
 
 description::
 
-A UGen modeling Erica Synths DIY Delay
+A simple audio volume gain plugin
 
 
 classmethods::
 
 method::ar, kr
-
+SynthDef("beat", { arg imp = 2.25, den = 8, op = 0;
+    var buf = Buffer.read(s, "/home/aiden/.local/share/SuperCollider/downloaded-quarks/Dirt-Samples/breaks125/015_sdstckbr.wav");
+    var in1 = Impulse.kr(imp);
+    var in2 = Dust.kr(den);
+    var bool = BooleanLogic.kr(in1, in2, op);
+	var dem = Dseq([0,  11000, 18000, 29000] , inf);
+    var d = Demand.kr(bool, 0, dem);
+    var play = PlayBuf.ar(1, buf, 1, bool, d);
+    Out.ar(0, play);
+}).send(s)
 argument::TODO
 
 argument::TODO

@@ -19,7 +19,7 @@ namespace ModeledModules {
         Iir::ChebyshevI::BandPass<4> BPF;
 
         [[nodiscard]] float frequencyModulation(float s) const;
-        enum inputs {INPUT, BP_CF, BP_R, BP_RQ, LP2_CF, LP2_R, LP4_CF, LP4_R, FM_FREQ, FM_MUL, FM_INDEX};
+        enum inputs {INPUT, BP_CF, BP_R, BP_RQ, LP2_CF, LP2_R, LP4_CF, LP4_R};
 
     };
 

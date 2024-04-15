@@ -3,7 +3,6 @@
 
 #include "SC_PlugIn.hpp"
 #include "Ripples.hpp"
-#include "../../external/iir1/Iir.h"
 
 static InterfaceTable* ft;
 
@@ -30,16 +29,13 @@ namespace ModeledModules {
         BPF.setup(sampleRate(), in0(BP_CF), width, in0(BP_R));
 
         for(int i = 0; i < nSamples; ++i){
-            outbuf0[i] = zapgremlins(frequencyModulation(BPF.filter(input[i])));
-            outbuf1[i] = zapgremlins(frequencyModulation(LPF2.filter(input[i])));
-            outbuf2[i] = zapgremlins(frequencyModulation(LPF4.filter(input[i])));
+            outbuf0[i] = zapgremlins(BPF.filter(input[i]));
+            outbuf1[i] = zapgremlins(LPF2.filter(input[i]));
+            outbuf2[i] = zapgremlins(LPF4.filter(input[i]));
         }
 
     }
 
-    float Ripples::frequencyModulation(float s) const{
-        return in0(FM_MUL) * sinf(twopi_f * 440.f * (s / (float) sampleRate()) + in0(FM_INDEX)*sinf(twopi_f * in0(FM_FREQ) * (s / (float) sampleRate())));
-    }
 
 
 } // namespace ModeledModules

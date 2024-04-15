@@ -1,5 +1,5 @@
-// Plugin DIYDelay.hpp
-// Aiden Benton (dev@aiden-benton.com)
+// PluginDIYDelay.hpp
+// Aiden Benton (intothebeans@site.com)
 
 #pragma once
 
@@ -9,16 +9,16 @@ namespace ModeledModules {
 
 class DIYDelay : public SCUnit {
 public:
-DIYDelay();
+    DIYDelay();
 
-// Destructor
-// ~DIYDelay();
+    // Destructor
+    // ~DIYDelay();
 
 private:
-// Calc function
-void next(int nSamples);
+    // Calc function
+    void next(int nSamples);
 
-// Member variables
+    // Member variables
 };
 
 } // namespace ModeledModules
