@@ -10,7 +10,8 @@ cmake_minimum_required(VERSION 3.12)
 set(project_name "Modeled Modules")
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake_modules ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 17)
-
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(SC_PATH "../supercollider")
 ####################################################################################################
 # load modules
 include(SuperColliderServerPlugin RESULT_VARIABLE server_plugin_found)

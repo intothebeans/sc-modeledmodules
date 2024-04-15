@@ -5,20 +5,39 @@
 
 #include "SC_PlugIn.hpp"
 
-namespace ModeledModules {
+namespace ModeledModules
+{
 
-class DIYDelay : public SCUnit {
-public:
-    DIYDelay();
+    class DIYDelay : public SCUnit
+    {
+    public:
+        DIYDelay();
+        ~DIYDelay();
 
-    // Destructor
-    // ~DIYDelay();
+    private:
+        // Calc function
+        void next(int nSamples);
+        float saturation(float sample) const;
 
-private:
-    // Calc function
-    void next(int nSamples);
+        float maxdelay;
+        int bufsize;
+        int mask;
+        float *buf;
+        int writephase = 0;
 
-    // Member variables
-};
+        const float sampleRateF = static_cast<float>(sampleRate());
 
-} // namespace ModeledModules
+        enum inputs
+        {
+            INPUT,
+            DELAY_TIME,
+            FEEDBACK,
+            TAPE,
+            ADD,
+            FREEZE,
+            REVERSE,
+            MAX_DELAY
+        };
+    };
+
+}

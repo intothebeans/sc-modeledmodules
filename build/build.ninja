@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_BooleanLogic_scsynth: phony || cmake_obj
 build CMakeFiles/BooleanLogic_scsynth.dir/plugins/BooleanLogic/BooleanLogic.cpp.o: CXX_COMPILER__BooleanLogic_scsynth_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/BooleanLogic/BooleanLogic.cpp || cmake_object_order_depends_target_BooleanLogic_scsynth
   DEFINES = -DBooleanLogic_scsynth_EXPORTS -DNOVA_SIMD
   DEP_FILE = CMakeFiles/BooleanLogic_scsynth.dir/plugins/BooleanLogic/BooleanLogic.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/BooleanLogic_scsynth.dir
   OBJECT_FILE_DIR = CMakeFiles/BooleanLogic_scsynth.dir/plugins/BooleanLogic
@@ -86,7 +86,7 @@ build cmake_object_order_depends_target_BooleanLogic_supernova: phony || cmake_o
 build CMakeFiles/BooleanLogic_supernova.dir/plugins/BooleanLogic/BooleanLogic.cpp.o: CXX_COMPILER__BooleanLogic_supernova_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/BooleanLogic/BooleanLogic.cpp || cmake_object_order_depends_target_BooleanLogic_supernova
   DEFINES = -DBooleanLogic_supernova_EXPORTS -DNOVA_SIMD -DSUPERNOVA
   DEP_FILE = CMakeFiles/BooleanLogic_supernova.dir/plugins/BooleanLogic/BooleanLogic.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/BooleanLogic_supernova.dir
   OBJECT_FILE_DIR = CMakeFiles/BooleanLogic_supernova.dir/plugins/BooleanLogic
@@ -120,7 +120,7 @@ build cmake_object_order_depends_target_Ripples_scsynth: phony || cmake_object_o
 build CMakeFiles/Ripples_scsynth.dir/plugins/Ripples/Ripples.cpp.o: CXX_COMPILER__Ripples_scsynth_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/Ripples/Ripples.cpp || cmake_object_order_depends_target_Ripples_scsynth
   DEFINES = -DNOVA_SIMD -DRipples_scsynth_EXPORTS
   DEP_FILE = CMakeFiles/Ripples_scsynth.dir/plugins/Ripples/Ripples.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/Ripples_scsynth.dir
   OBJECT_FILE_DIR = CMakeFiles/Ripples_scsynth.dir/plugins/Ripples
@@ -154,7 +154,7 @@ build cmake_object_order_depends_target_Ripples_supernova: phony || cmake_object
 build CMakeFiles/Ripples_supernova.dir/plugins/Ripples/Ripples.cpp.o: CXX_COMPILER__Ripples_supernova_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/Ripples/Ripples.cpp || cmake_object_order_depends_target_Ripples_supernova
   DEFINES = -DNOVA_SIMD -DRipples_supernova_EXPORTS -DSUPERNOVA
   DEP_FILE = CMakeFiles/Ripples_supernova.dir/plugins/Ripples/Ripples.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/Ripples_supernova.dir
   OBJECT_FILE_DIR = CMakeFiles/Ripples_supernova.dir/plugins/Ripples
@@ -188,7 +188,7 @@ build cmake_object_order_depends_target_DIYDelay_scsynth: phony || cmake_object_
 build CMakeFiles/DIYDelay_scsynth.dir/plugins/DIYDelay/DIYDelay.cpp.o: CXX_COMPILER__DIYDelay_scsynth_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/DIYDelay/DIYDelay.cpp || cmake_object_order_depends_target_DIYDelay_scsynth
   DEFINES = -DDIYDelay_scsynth_EXPORTS -DNOVA_SIMD
   DEP_FILE = CMakeFiles/DIYDelay_scsynth.dir/plugins/DIYDelay/DIYDelay.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/DIYDelay_scsynth.dir
   OBJECT_FILE_DIR = CMakeFiles/DIYDelay_scsynth.dir/plugins/DIYDelay
@@ -222,7 +222,7 @@ build cmake_object_order_depends_target_DIYDelay_supernova: phony || cmake_objec
 build CMakeFiles/DIYDelay_supernova.dir/plugins/DIYDelay/DIYDelay.cpp.o: CXX_COMPILER__DIYDelay_supernova_unscanned_Debug /home/aiden/git/sc-modeledmodules/plugins/DIYDelay/DIYDelay.cpp || cmake_object_order_depends_target_DIYDelay_supernova
   DEFINES = -DDIYDelay_supernova_EXPORTS -DNOVA_SIMD -DSUPERNOVA
   DEP_FILE = CMakeFiles/DIYDelay_supernova.dir/plugins/DIYDelay/DIYDelay.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/supercollider/external_libraries/nova-simd -I/home/aiden/git/supercollider/include/plugin_interface -I/home/aiden/git/supercollider/include/common -I/home/aiden/git/supercollider/common
   OBJECT_DIR = CMakeFiles/DIYDelay_supernova.dir
   OBJECT_FILE_DIR = CMakeFiles/DIYDelay_supernova.dir/plugins/DIYDelay
@@ -327,7 +327,7 @@ build cmake_object_order_depends_target_iir: phony || .
 build external/iir1/CMakeFiles/iir.dir/iir/Biquad.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Biquad.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/Biquad.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -335,7 +335,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/Biquad.cpp.o: CXX_COMPILER__iir_unsca
 build external/iir1/CMakeFiles/iir.dir/iir/Butterworth.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Butterworth.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/Butterworth.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -343,7 +343,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/Butterworth.cpp.o: CXX_COMPILER__iir_
 build external/iir1/CMakeFiles/iir.dir/iir/Cascade.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Cascade.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/Cascade.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -351,7 +351,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/Cascade.cpp.o: CXX_COMPILER__iir_unsc
 build external/iir1/CMakeFiles/iir.dir/iir/ChebyshevI.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/ChebyshevI.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/ChebyshevI.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -359,7 +359,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/ChebyshevI.cpp.o: CXX_COMPILER__iir_u
 build external/iir1/CMakeFiles/iir.dir/iir/ChebyshevII.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/ChebyshevII.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/ChebyshevII.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -367,7 +367,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/ChebyshevII.cpp.o: CXX_COMPILER__iir_
 build external/iir1/CMakeFiles/iir.dir/iir/Custom.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Custom.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/Custom.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -375,7 +375,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/Custom.cpp.o: CXX_COMPILER__iir_unsca
 build external/iir1/CMakeFiles/iir.dir/iir/PoleFilter.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/PoleFilter.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/PoleFilter.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -383,7 +383,7 @@ build external/iir1/CMakeFiles/iir.dir/iir/PoleFilter.cpp.o: CXX_COMPILER__iir_u
 build external/iir1/CMakeFiles/iir.dir/iir/RBJ.cpp.o: CXX_COMPILER__iir_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/RBJ.cpp || cmake_object_order_depends_target_iir
   DEFINES = -Diir_EXPORTS
   DEP_FILE = external/iir1/CMakeFiles/iir.dir/iir/RBJ.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir.dir/iir
@@ -425,56 +425,56 @@ build cmake_object_order_depends_target_iir_static: phony || .
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/Biquad.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Biquad.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/Biquad.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/Butterworth.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Butterworth.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/Butterworth.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/Cascade.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Cascade.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/Cascade.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/ChebyshevI.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/ChebyshevI.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/ChebyshevI.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/ChebyshevII.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/ChebyshevII.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/ChebyshevII.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/Custom.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/Custom.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/Custom.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/PoleFilter.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/PoleFilter.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/PoleFilter.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
 
 build external/iir1/CMakeFiles/iir_static.dir/iir/RBJ.cpp.o: CXX_COMPILER__iir_static_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/iir/RBJ.cpp || cmake_object_order_depends_target_iir_static
   DEP_FILE = external/iir1/CMakeFiles/iir_static.dir/iir/RBJ.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -pedantic
+  FLAGS = -g -std=gnu++17 -fPIC -Wall -pedantic
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1 -I/home/aiden/git/sc-modeledmodules/external/iir1/iir
   OBJECT_DIR = external/iir1/CMakeFiles/iir_static.dir
   OBJECT_FILE_DIR = external/iir1/CMakeFiles/iir_static.dir/iir
@@ -577,7 +577,7 @@ build cmake_object_order_depends_target_iirdemo: phony || cmake_object_order_dep
 
 build external/iir1/demo/CMakeFiles/iirdemo.dir/iirdemo.cpp.o: CXX_COMPILER__iirdemo_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/demo/iirdemo.cpp || cmake_object_order_depends_target_iirdemo
   DEP_FILE = external/iir1/demo/CMakeFiles/iirdemo.dir/iirdemo.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall
+  FLAGS = -g -std=gnu++17 -Wall
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1
   OBJECT_DIR = external/iir1/demo/CMakeFiles/iirdemo.dir
   OBJECT_FILE_DIR = external/iir1/demo/CMakeFiles/iirdemo.dir
@@ -610,7 +610,7 @@ build cmake_object_order_depends_target_rbj_update: phony || cmake_object_order_
 
 build external/iir1/demo/CMakeFiles/rbj_update.dir/rbj_update.cpp.o: CXX_COMPILER__rbj_update_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/demo/rbj_update.cpp || cmake_object_order_depends_target_rbj_update
   DEP_FILE = external/iir1/demo/CMakeFiles/rbj_update.dir/rbj_update.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall
+  FLAGS = -g -std=gnu++17 -Wall
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1
   OBJECT_DIR = external/iir1/demo/CMakeFiles/rbj_update.dir
   OBJECT_FILE_DIR = external/iir1/demo/CMakeFiles/rbj_update.dir
@@ -643,7 +643,7 @@ build cmake_object_order_depends_target_ecg50hzfilt: phony || cmake_object_order
 
 build external/iir1/demo/CMakeFiles/ecg50hzfilt.dir/ecg50hzfilt.cpp.o: CXX_COMPILER__ecg50hzfilt_unscanned_Debug /home/aiden/git/sc-modeledmodules/external/iir1/demo/ecg50hzfilt.cpp || cmake_object_order_depends_target_ecg50hzfilt
   DEP_FILE = external/iir1/demo/CMakeFiles/ecg50hzfilt.dir/ecg50hzfilt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall
+  FLAGS = -g -std=gnu++17 -Wall
   INCLUDES = -I/home/aiden/git/sc-modeledmodules/external/iir1
   OBJECT_DIR = external/iir1/demo/CMakeFiles/ecg50hzfilt.dir
   OBJECT_FILE_DIR = external/iir1/demo/CMakeFiles/ecg50hzfilt.dir
@@ -791,14 +791,14 @@ build external/iir1/demo/all: phony external/iir1/demo/iirdemo external/iir1/dem
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/aiden/git/sc-modeledmodules/CMakeLists.txt /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderCompilerConfig.cmake /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderServerPlugin.cmake /home/aiden/git/sc-modeledmodules/external/iir1/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/Config.cmake.in /home/aiden/git/sc-modeledmodules/external/iir1/JoinPaths.cmake /home/aiden/git/sc-modeledmodules/external/iir1/demo/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/iir.pc.in /home/aiden/git/supercollider/SCVersion.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/InstallRequiredSystemLibraries.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/aiden/git/sc-modeledmodules/CMakeLists.txt /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderCompilerConfig.cmake /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderServerPlugin.cmake /home/aiden/git/sc-modeledmodules/external/iir1/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/Config.cmake.in /home/aiden/git/sc-modeledmodules/external/iir1/JoinPaths.cmake /home/aiden/git/sc-modeledmodules/external/iir1/demo/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/iir.pc.in /home/aiden/git/supercollider/SCVersion.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/InstallRequiredSystemLibraries.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/aiden/git/sc-modeledmodules/CMakeLists.txt /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderCompilerConfig.cmake /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderServerPlugin.cmake /home/aiden/git/sc-modeledmodules/external/iir1/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/Config.cmake.in /home/aiden/git/sc-modeledmodules/external/iir1/JoinPaths.cmake /home/aiden/git/sc-modeledmodules/external/iir1/demo/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/iir.pc.in /home/aiden/git/supercollider/SCVersion.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/InstallRequiredSystemLibraries.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
+build /home/aiden/git/sc-modeledmodules/CMakeLists.txt /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderCompilerConfig.cmake /home/aiden/git/sc-modeledmodules/cmake_modules/SuperColliderServerPlugin.cmake /home/aiden/git/sc-modeledmodules/external/iir1/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/Config.cmake.in /home/aiden/git/sc-modeledmodules/external/iir1/JoinPaths.cmake /home/aiden/git/sc-modeledmodules/external/iir1/demo/CMakeLists.txt /home/aiden/git/sc-modeledmodules/external/iir1/iir.pc.in /home/aiden/git/supercollider/SCVersion.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/InstallRequiredSystemLibraries.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
 
 
 #############################################
