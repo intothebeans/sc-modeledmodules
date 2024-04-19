@@ -17,13 +17,14 @@ namespace ModeledModules
     private:
         // Calc function
         void next(int nSamples);
-        float saturation(float sample) const;
+        static float saturation(float sample) ;
 
-        float maxdelay;
-        int bufsize;
-        int mask;
-        float *buf;
-        int writephase = 0;
+        float m_maxDelay;
+        int m_bufSize;
+        int m_mask;
+        float *m_buf;
+        int m_writeIndex = 0;
+        int m_readIndex = 0;
 
         const float sampleRateF = static_cast<float>(sampleRate());
 
@@ -33,7 +34,6 @@ namespace ModeledModules
             DELAY_TIME,
             FEEDBACK,
             TAPE,
-            ADD,
             FREEZE,
             REVERSE,
             MAX_DELAY

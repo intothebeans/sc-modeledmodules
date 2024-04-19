@@ -3,6 +3,7 @@
 
 #include "SC_PlugIn.hpp"
 #include "DIYDelay.hpp"
+#include <iostream>
 
 static InterfaceTable *ft;
 
@@ -12,84 +13,105 @@ namespace ModeledModules
     DIYDelay::DIYDelay()
     {
         mCalcFunc = make_calc_function<DIYDelay, &DIYDelay::next>();
-        maxdelay = in0(MAX_DELAY);
-        bufsize = NEXTPOWEROFTWO(sampleRateF * maxdelay);
-        mask = bufsize - 1;
-
-        buf = (float *)RTAlloc(this->mWorld, bufsize * sizeof(float));
-
-        if (buf == nullptr)
+        m_maxDelay = in0(MAX_DELAY);
+        m_bufSize = NEXTPOWEROFTWO(sampleRate() * m_maxDelay);
+        m_mask = m_bufSize - 1;
+        m_buf = (float *)RTAlloc(mWorld, m_bufSize * sizeof(float));
+        if (m_buf == nullptr)
         {
-            mCalcFunc = make_calc_function<DIYDelay, nullptr>();
             ClearUnitOutputs(this, 1);
-
-            if (this->mWorld->mVerbosity > -2)
+            if (mWorld->mVerbosity > -2)
             {
                 Print("DIYDelay: failed to allocate memory for buffer\n");
             }
             return;
         }
-        memset(buf, 0, bufsize * sizeof(float));
+        memset(m_buf, 0, m_bufSize * sizeof(float));
 
         next(1);
     }
 
     DIYDelay::~DIYDelay()
     {
-        RTFree(this->mWorld, buf);
+        RTFree(mWorld, m_buf);
     }
 
-    float DIYDelay::saturation(float sample) const
+    float DIYDelay::saturation(float sample)
     {
-        float clipped = tanhf(sample * 20);
-        return sample + (clipped - sample) * 0.5f;
+        float scaled = sample * 0.5f;
+        float saturated = tanhf(scaled * 0.5f);
+        return saturated;
     }
 
     void DIYDelay::next(int nSamples)
     {
         // from https://github.com/supercollider/example-plugins/blob/main/03-AnalogEcho/AnalogEcho.cpp
+        // Inputs from SC
         const float *input = in(INPUT);
         float *outbuf = out(0);
         float delay = in0(DELAY_TIME);
         float fb = in0(FEEDBACK);
 
-        float add = in0(ADD);
         float freeze = in0(FREEZE);
-        float reverse = in0(REVERSE);
+        auto reverse = static_cast<bool>(in0(REVERSE));
         float tape = in0(TAPE);
 
-        if (delay > maxdelay)
+
+        // local stateless variables
+        float const *buf = m_buf;
+        int mask = m_mask;
+        int write = m_writeIndex;
+        int read = (m_readIndex == 0) ? m_bufSize - 1 : m_readIndex;
+
+        if (delay > m_maxDelay)
         {
-            delay = maxdelay;
+            Print("Delay set to %f, but max delay is %f\n. Setting delay to %f.", delay, m_maxDelay, m_maxDelay);
+            delay = m_maxDelay;
         }
 
+        // initialize delay time
         float delay_samples = sampleRateF * delay;
-        float offset = delay_samples;
-        float frac = delay_samples - offset;
+        auto offset = static_cast<int>(delay_samples);
+        float frac = delay_samples - (float)offset;
+
+        float delayed;
+        int phase1;
+        int phase2;
+        int phase3;
+        int phase0;
+        float d0;
+        float d1;
+        float d2;
+        float d3;
 
         for (int i = 0; i < nSamples; ++i)
         {
-            auto phase1 = static_cast<int>(writephase - offset);
-            int phase2 = phase1 - 1;
-            int phase3 = phase1 - 2;
-            int phase0 = phase1 + 1;
-            float d0 = buf[phase0 & mask];
-            float d1 = buf[phase1 & mask];
-            float d2 = buf[phase2 & mask];
-            float d3 = buf[phase3 & mask];
+            phase1 = reverse ? read - offset : write - offset;
+            phase2 = phase1 - 1;
+            phase3 = phase1 - 2;
+            phase0 = phase1 + 1;
+            d0 = buf[phase0 & mask];
+            d1 = buf[phase1 & mask];
+            d2 = buf[phase2 & mask];
+            d3 = buf[phase3 & mask];
 
-            float delayed = cubicinterp(frac, d0, d1, d2, d3);
+            delayed = cubicinterp(frac, d0, d1, d2, d3);
+
+            float outSample = zapgremlins(input[i] + (fb * delayed));
 
             if (tape == 1)
             {
-                delayed = saturation(delayed);
+                outSample = saturation(outSample);
             }
 
-            outbuf[i] = zapgremlins(input[i] + fb * delayed);
-            buf[writephase] = outbuf[i];
+            outbuf[i] = outSample;
+            m_buf[write] = outSample; //feedback
 
-            writephase = (writephase + 1) & mask;
+            write = (write + 1) & mask;
+            read = (read - 1) & mask;
         }
+        m_writeIndex = write;
+        m_readIndex = read;
     }
 
 } // namespace ModeledModules
