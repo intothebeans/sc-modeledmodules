@@ -71,29 +71,19 @@ namespace ModeledModules
         auto offset = static_cast<int>(delay_samples);
         float frac = delay_samples - (float)offset;
 
-        float delayed;
-        int phase1;
-        int phase2;
-        int phase3;
-        int phase0;
-        float d0;
-        float d1;
-        float d2;
-        float d3;
-
         for (int i = 0; i < nSamples; ++i)
         {
 
-            phase1 = reverse ? read - offset : write - offset;
-            phase2 = phase1 - 1;
-            phase3 = phase1 - 2;
-            phase0 = phase1 + 1;
-            d0 = buf[phase0 & mask];
-            d1 = buf[phase1 & mask];
-            d2 = buf[phase2 & mask];
-            d3 = buf[phase3 & mask];
+            int phase1 = reverse ? read - offset : write - offset;
+            int phase2 = phase1 - 1;
+            int phase3 = phase1 - 2;
+            int phase0 = phase1 + 1;
+            float d0 = buf[phase0 & mask];
+            float d1 = buf[phase1 & mask];
+            float d2 = buf[phase2 & mask];
+            float d3 = buf[phase3 & mask];
 
-            delayed = cubicinterp(frac, d0, d1, d2, d3);
+            float delayed = cubicinterp(frac, d0, d1, d2, d3);
 
             float outSample = zapgremlins(input[i] + (fb * delayed));
 
