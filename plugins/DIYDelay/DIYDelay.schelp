@@ -1,30 +1,42 @@
-class:: DIYDelay
-summary:: A simple audio volume gain plugin
-related:: TODO
-categories:: UGens>TODO
+title:: DIYDelay
+summary:: A model of Erica Synths DIY Delay
+related:: Classes/DelayC
+categories:: UGens>Delay
 
 description::
 
-A simple audio volume gain plugin
+A model of Erica Synths DIY Delay. Uses cubic interpolation for the delay line with options for tape saturation,
+feedback, reverse delay, and delay hold. 
+
+note:: DIYDelay needs at least 4 samples buffer. Therefore the minimum maxdelaytime and delaytime must be SampleDur.ir * 4. ::
 
 
 classmethods::
 
-method::ar, kr
-SynthDef("beat", { arg imp = 2.25, den = 8, op = 0;
-    var buf = Buffer.read(s, "/home/aiden/.local/share/SuperCollider/downloaded-quarks/Dirt-Samples/breaks125/015_sdstckbr.wav");
-    var in1 = Impulse.kr(imp);
-    var in2 = Dust.kr(den);
-    var bool = BooleanLogic.kr(in1, in2, op);
-	var dem = Dseq([0,  11000, 18000, 29000] , inf);
-    var d = Demand.kr(bool, 0, dem);
-    var play = PlayBuf.ar(1, buf, 1, bool, d);
-    Out.ar(0, play);
-}).send(s)
-argument::TODO
+method::ar
 
-argument::TODO
+argument::input
+Input to be delayed. 
 
+argument::delayTime
+Delay time in seconds.
+
+argument::feedback
+Feedback amount.
+
+argument::tape 
+Enable or disable tape saturation. Takes a teletype::1:: or teletype::0::.
+
+argument::hold
+Holds the current delayed samples and repeats them when enabled. Takes a teletype::1:: or teletype::0::.
+
+argument::reverse
+Enable or disable reverse delay. Takes a teletype::1:: or teletype::0::.
+
+argument::maxDelayTime
+Maximum delay time in seconds.
+
+private:: checkInputs
 
 examples::
 

@@ -3,7 +3,6 @@
 
 #include "SC_PlugIn.hpp"
 #include "DIYDelay.hpp"
-#include <iostream>
 
 static InterfaceTable *ft;
 
@@ -52,25 +51,23 @@ namespace ModeledModules
         float delay = in0(DELAY_TIME);
         float fb = in0(FEEDBACK);
 
-        float freeze = in0(FREEZE);
+        auto hold = static_cast<bool>(in0(HOLD));
         auto reverse = static_cast<bool>(in0(REVERSE));
-        float tape = in0(TAPE);
-
+        auto tape = static_cast<bool>(in0(TAPE));
 
         // local stateless variables
         float const *buf = m_buf;
         int mask = m_mask;
-        int write = m_writeIndex;
-        int read = (m_readIndex == 0) ? m_bufSize - 1 : m_readIndex;
+        int write = m_readIndex;
+        int read = (m_reverseIndex == 0) ? m_bufSize - 1 : m_reverseIndex;
 
         if (delay > m_maxDelay)
         {
-            Print("Delay set to %f, but max delay is %f\n. Setting delay to %f.", delay, m_maxDelay, m_maxDelay);
             delay = m_maxDelay;
         }
 
         // initialize delay time
-        float delay_samples = sampleRateF * delay;
+        float delay_samples = sampleRate() * delay;
         auto offset = static_cast<int>(delay_samples);
         float frac = delay_samples - (float)offset;
 
@@ -86,6 +83,7 @@ namespace ModeledModules
 
         for (int i = 0; i < nSamples; ++i)
         {
+
             phase1 = reverse ? read - offset : write - offset;
             phase2 = phase1 - 1;
             phase3 = phase1 - 2;
@@ -99,19 +97,22 @@ namespace ModeledModules
 
             float outSample = zapgremlins(input[i] + (fb * delayed));
 
-            if (tape == 1)
+            if (tape)
             {
                 outSample = saturation(outSample);
             }
 
             outbuf[i] = outSample;
-            m_buf[write] = outSample; //feedback
+            if (!hold)
+            {
+                m_buf[write] = outSample;
+            }
 
             write = (write + 1) & mask;
             read = (read - 1) & mask;
         }
-        m_writeIndex = write;
-        m_readIndex = read;
+        m_readIndex = write;
+        m_reverseIndex = read;
     }
 
 } // namespace ModeledModules
