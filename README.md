@@ -1,15 +1,16 @@
 # Modeled Modules
 
-Author: Aiden Benton
+A selection of analog synthesizer modules modeled as SuperCollider UGens. 
 
-Wavefonix Boolean Logic model as a UGen
+### Installing
 
-### Requirements
-
-- CMake >= 3.5
-- SuperCollider source code
+Download the latest release for your platform, and extract the folder into your SuperCollider extensions directory. 
 
 ### Building
+
+Dependencies: 
+- CMake >= 3.5
+- SuperCollider source code
 
 Clone the project:
 
